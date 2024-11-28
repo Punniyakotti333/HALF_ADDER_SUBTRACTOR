@@ -53,13 +53,14 @@ Figure -02 HALF Subtractor
 **Program:**
 
 ```
-module full(A,B,Cin,Bin,Sum,Carry,Diff,Borrow);
-input A,B,Cin,Bin;
-output Sum,Carry,Diff,Borrow;
-assign Sum=A^(B^Cin);
-assign Carry=(A&B)|(A&Cin)|(B&Cin);
-assign Diff=A^(B^Bin);
-assign Borrow=(~A&Bin)|(~A&B)|(B&Bin);
+module half(a,b,c,d,e,f,g);
+input a,b;
+output c,d,e,f,g;
+assign c=a^b;
+assign d=a&b;
+assign e=a^b;
+assign f=~a;
+assign g=f|b;
 endmodule
 ```
 
